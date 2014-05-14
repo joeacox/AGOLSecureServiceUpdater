@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+
+    <!-- HTML META Props -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=7,IE=9,IE=10">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=yes, width=device-width"/>
+
+    <!-- HTML Head Props -->
+    <title>Joe's App</title>
+
+    
+    <!--Styles -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="styles/core.css">
+    <!-- Bootstrap -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script>
+            var dojoConfig = {
+                packages : [{
+                    name : "app",
+                    location : location.pathname.replace(/\/[^/]+$/, "") + "/scripts"
+                }]
+            };
+    </script>
+
+    <!-- 3rd Party Libs -->
+    <script src="http://js.arcgis.com/3.9"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+    <!-- Non Minified Required Files -->
+    <script src="scripts/requires.js"></script>
+
+    <!-- Custom GEO-Jobe Classes -->
+
+    <!-- Core Java Script -->
+    <script src="scripts/core.js"></script>
+
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- Logged Out View -->
+      <div id="loggedOutView">
+        <p>
+          Loading...
+        </p>
+      </div>
+
+      <!-- Logged In View -->
+      <div id="loggedInView">
+        <div class="page-header"> 
+          <h3 id="nameParagraph"></h3>
+        </div>
+        <div class="navbar navbar-default" id="selectItemContainer">
+          <select class="form-control" id="folderSelect"> </select>
+          <select class="form-control" id="itemSelect"></select>
+          <!-- <button id="changeItemUrlBtn"></button> -->
+        </div>  
+        <div id="updateItemContainer">
+        <div id="serviceInfoParagraph"></div>
+        <input class="form-control" id="urlInput" type="text" placeholder="New URL"/>
+        <input class="form-control" id="userNameInput" type="text" placeholder="Username"/>
+        <input  class="form-control" id="passwordInput" type="password" placeholder="Password"/>
+        <button  class="btn btn-lg btn-primary" id="updateUrlBtn">Update</button>
+        </div>
+        <div class="page-header">  
+        <button type="button" class="btn btn-lg btn-primary" id="signOutBtn">SIGN OUT</button>
+        </div>
+      </div>
+  </body>
+</html>
